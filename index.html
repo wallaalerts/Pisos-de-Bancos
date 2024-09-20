@@ -3,30 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pisos de Bancos - Alertas de Inmuebles Bancarios</title>
+    <title>Pisos de Bancos - Alertas Inmediatas de Inmuebles Bancarios | Encuentra Ofertas</title>
+    <meta name="description" content="Recibe alertas instantáneas de propiedades bancarias en venta. Encuentra las mejores ofertas en pisos, casas y terrenos de Haya, Aliseda, Altamira, Servihabitat y Solvia.">
     <link rel="icon" type="image/x-icon" href="images/favicon_pb.ico">
+    <link rel="canonical" href="https://www.pisos-de-bancos.com">
 
-    <!-- Open Graph Meta Tags for beautiful link previews -->
-    <meta property="og:title" content="Pisos de Bancos - Alertas de Inmuebles Bancarios">
-    <meta property="og:description" content="Recibe alertas inmediatas de nuevos inmuebles de los portales inmobiliarios de bancos más importantes. ¡Encuentra propiedades bancarias al instante!">
-    <meta property="og:image" itemprop="image" content="https://www.pisos-de-bancos.com/images/logo_pb.png">
-    <meta property="og:image:width" content="300">
-    <meta property="og:image:height" content="300">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pisos de Bancos - Alertas Inmediatas de Inmuebles Bancarios">
+    <meta property="og:description" content="Recibe alertas instantáneas de nuevos inmuebles de los principales portales bancarios. ¡Encuentra las mejores ofertas en propiedades bancarias!">
+    <meta property="og:image" content="https://www.pisos-de-bancos.com/images/logo_pb.png">
     <meta property="og:url" content="https://www.pisos-de-bancos.com">
     <meta property="og:type" content="website">
 
-    <!-- Additional meta tags for Twitter -->
+    <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pisos de Bancos - Alertas de Inmuebles Bancarios">
-    <meta name="twitter:description" content="Recibe alertas inmediatas de nuevos inmuebles de los portales inmobiliarios de bancos más importantes. ¡Encuentra propiedades bancarias al instante!">
+    <meta name="twitter:title" content="Pisos de Bancos - Alertas Inmediatas de Inmuebles Bancarios">
+    <meta name="twitter:description" content="Recibe alertas instantáneas de nuevos inmuebles de los principales portales bancarios. ¡Encuentra las mejores ofertas en propiedades bancarias!">
     <meta name="twitter:image" content="https://www.pisos-de-bancos.com/images/logo_pb.png">
 
+    <!-- Hreflang tags for language/regional URLs -->
+    <link rel="alternate" hreflang="es" href="https://www.pisos-de-bancos.com" />
+    <link rel="alternate" hreflang="en" href="https://www.pisos-de-bancos.com/en.html" />
+    <link rel="alternate" hreflang="ca" href="https://www.pisos-de-bancos.com/ca.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.pisos-de-bancos.com" />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="fonts/Alexandria-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="images/logo_pb.png" as="image">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Pisos de Bancos",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Android",
+      "description": "Recibe alertas inmediatas de nuevos inmuebles de los portales inmobiliarios de bancos más importantes.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "RSTU"
+      }
+    }
+    </script>
+
     <style>
+        /* Critical CSS inlined for faster rendering */
         @font-face {
             font-family: 'Rubik';
             src: url('fonts/Alexandria-VariableFont_wght.ttf') format('truetype');
             font-weight: 100 900;
             font-style: normal;
+            font-display: swap;
         }
         a {
             color: inherit;
@@ -227,9 +260,9 @@
     </style>
 </head>
 <body>
-    
     <div class="language-selector">
         <div class="container">
+            <label for="language-select" class="visually-hidden">Seleccionar idioma</label>
             <select id="language-select" onchange="changeLanguage()">
                 <option value="en">English</option>
                 <option value="ca">Català</option>
@@ -240,64 +273,59 @@
 
     <header>
         <div class="container">
-            <img src="images/logo_pb.png" alt="Logo de Pisos de Bancos" class="logo">
+            <img src="images/logo_pb.png" alt="Logo de Pisos de Bancos" class="logo" width="100" height="100">
             <h1>Pisos de Bancos</h1>
-            <p style="font-size: 20px;">Alertas para Inmuebles Bancarios</p>
+            <p class="tagline">Alertas para Inmuebles Bancarios</p>
         </div>
     </header>
 
     <main class="container">
         <section class="description">
             <h2>¡Encuentra propiedades bancarias al instante!</h2>
-            <p>Pisos de Bancos es la aplicación ideal para quienes buscan oportunidades en propiedades inmobiliarias de bancos.<br>Recibe alertas inmediatas de nuevos inmuebles de los portales inmobiliarios de bancos más importantes:</p>
-            <strong>Haya</strong></br>
-            <strong>Aliseda</strong></br>
-            <strong>Altamira</strong></br>
-            <strong>Servihabitat</strong></br>
-            <strong>Solvia</strong></br>
-            <p>Nosotros rastreamos los anuncios por ti, ¡sólo espera las notificaciones!</p>
+            <p>Pisos de Bancos es la aplicación ideal para quienes buscan oportunidades en propiedades inmobiliarias de bancos. Recibe alertas inmediatas de nuevos inmuebles de los portales inmobiliarios de bancos más importantes:</p>
+            <p>Nosotros rastreamos los anuncios por ti, ¡solo espera las notificaciones!</p>
 
-            <a href="https://play.google.com/store/apps/details?id=rstu.pisos_de_bancos" target="_blank">
-                <img id="google-badge" alt="Consíguelo en Google Play" src="https://play.google.com/intl/es/badges/static/images/badges/es_badge_web_generic.png" />
+            <a href="https://play.google.com/store/apps/details?id=rstu.pisos_de_bancos" target="_blank" rel="noopener">
+                <img id="google-badge" alt="Consíguelo en Google Play" src="https://play.google.com/intl/es/badges/static/images/badges/es_badge_web_generic.png" width="250" height="100" />
             </a>
         </section>
 
         <section class="features">
             <div class="feature">
-                <img src="images/ic_bell.svg" alt="Icono de alerta">
+                <img src="images/ic_bell.svg" alt="" aria-hidden="true" width="64" height="64">
                 <h3>Alertas Inmediatas</h3>
                 <p>Recibe notificaciones en tiempo real cuando se publiquen nuevas propiedades.</p>
             </div>
             <div class="feature">
-                <img src="images/ic_search.svg" alt="Icono de búsqueda">
+                <img src="images/ic_search.svg" alt="" aria-hidden="true" width="64" height="64">
                 <h3>Búsquedas Personalizadas</h3>
-                <p>Crea filtros para recibir sólo los inmuebles que te interesan.</p>
+                <p>Crea filtros para recibir solo los inmuebles que te interesan.</p>
             </div>
             <div class="feature">
-                <img src="images/ic_house.svg" alt="Icono de propiedades">
+                <img src="images/ic_house.svg" alt="" aria-hidden="true" width="64" height="64">
                 <h3>Propiedades Bancarias</h3>
                 <p>Accede a las mejores ofertas en casas, pisos y terrenos de los principales portales de inmuebles de bancos.</p>
             </div>
         </section>
 
-        <section class="screenshots">
+        <section class="screenshots" aria-label="Capturas de pantalla de la aplicación">
             <div class="screenshot" onclick="openCarousel(0)">
-                <img src="images/s_pb_1.jpg" alt="Screenshot 1">
+                <img src="images/s_pb_1.jpg" alt="Captura de pantalla 1" width="300" height="1000" loading="lazy">
             </div>
             <div class="screenshot" onclick="openCarousel(1)">
-                <img src="images/s_pb_2.jpg" alt="Screenshot 2">
+                <img src="images/s_pb_2.jpg" alt="Captura de pantalla 2" width="300" height="1000" loading="lazy">
             </div>
             <div class="screenshot" onclick="openCarousel(2)">
-                <img src="images/s_pb_3.jpg" alt="Screenshot 3">
+                <img src="images/s_pb_3.jpg" alt="Captura de pantalla 3" width="300" height="1000" loading="lazy">
             </div>
             <div class="screenshot" onclick="openCarousel(3)">
-                <img src="images/s_pb_4.jpg" alt="Screenshot 4">
+                <img src="images/s_pb_4.jpg" alt="Captura de pantalla 4" width="300" height="1000" loading="lazy">
             </div>
             <div class="screenshot" onclick="openCarousel(4)">
-                <img src="images/s_pb_5.jpg" alt="Screenshot 5">
+                <img src="images/s_pb_5.jpg" alt="Captura de pantalla 5" width="300" height="1000" loading="lazy">
             </div>
             <div class="screenshot" onclick="openCarousel(5)">
-                <img src="images/s_pb_6.jpg" alt="Screenshot 6">
+                <img src="images/s_pb_6.jpg" alt="Captura de pantalla 6" width="300" height="1000" loading="lazy">
             </div>
         </section>
 
@@ -314,16 +342,20 @@
 
 
         <section class="description">
+            <p>Descarga ahora la app para Android en la Google Play Store:</p>
             <a href="https://play.google.com/store/apps/details?id=rstu.pisos_de_bancos" target="_blank">
                 <img id="google-badge" alt="Consíguelo en Google Play" src="https://play.google.com/intl/es/badges/static/images/badges/es_badge_web_generic.png" />
             </a>
+            </br>
+            </br>
+            </br>
         </section>
 
         <section class="other-apps">
             <h2>Otras aplicaciones que te pueden interesar</h2>
             <div class="other-apps-container">
                 <div class="app">
-                    <a href="regalos_segunda_mano.html">
+                    <a href="https://wallaalerts.com/regalos_segunda_mano">
                         <img class="logo-other-app" src="images/logo_rsm.png" alt="Icono de Regalos Segunda Mano">
                         <h3>Regalos Segunda Mano</h3>
                         <p>Encuentra productos gratis en Wallapop en tu área.</p>
@@ -331,7 +363,7 @@
                     <a href="https://play.google.com/store/apps/details?id=rstu.cosasgratis_alerts" target="_blank" class="cta-button">Descargar</a>
                 </div>
                 <div class="app">
-                    <a href="index.html">
+                    <a href="https://wallaalerts.com/">
                         <img class="logo-other-app" src="images/logo_wa.png" alt="Icono de Walla Alerts">
                         <h3>Walla Alerts</h3>
                         <p>Alertas instantáneas de anuncios de Wallapop.</p>
@@ -339,7 +371,7 @@
                     <a href="https://play.google.com/store/apps/details?id=rstu.wallaalerts" target="_blank" class="cta-button">Descargar</a>
                 </div>
                 <div class="app">
-                    <a href="clothing_alerts_es.html">
+                    <a href="https://wallaalerts.com/clothing_alerts_es">
                         <img class="logo-other-app" src="images/logo_ca.png" alt="Icono de Clothing Alerts">
                         <h3>Clothing Alerts</h3>
                         <p>Alertas instantáneas para ofertas de ropa en Vinted.</p>
@@ -347,7 +379,7 @@
                     <a href="https://play.google.com/store/apps/details?id=rstu.clothing_alerts" target="_blank" class="cta-button">Descargar</a>
                 </div>
                 <div class="app">
-                    <a href="tc_alerts.html">
+                    <a href="https://wallaalerts.com/tc_alerts">
                         <img class="logo-other-app" src="images/logo_tc.png" alt="Icono de tc alerts">
                         <h3>tc alerts</h3>
                         <p>Alertas para todocoleccion: ideal para coleccionistas.</p>
