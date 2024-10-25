@@ -21,11 +21,11 @@
     <meta name="twitter:description" content="Recibe alertas instantáneas de nuevos inmuebles de los principales portales bancarios. ¡Encuentra las mejores ofertas en propiedades bancarias!">
     <meta name="twitter:image" content="https://www.pisos-de-bancos.com/images/logo_pb.png">
 
-    <!-- Hreflang tags for language/regional URLs -->
-    <link rel="alternate" hreflang="es" href="https://www.pisos-de-bancos.com" />
-    <link rel="alternate" hreflang="en" href="https://www.pisos-de-bancos.com/en.html" />
-    <link rel="alternate" hreflang="ca" href="https://www.pisos-de-bancos.com/ca.html" />
-    <link rel="alternate" hreflang="x-default" href="https://www.pisos-de-bancos.com" />
+    <!-- Hreflang tags -->
+    <link rel="alternate" hreflang="es" href="https://www.pisos-de-bancos.com">
+    <link rel="alternate" hreflang="en" href="https://www.pisos-de-bancos.com/en.html">
+    <link rel="alternate" hreflang="ca" href="https://www.pisos-de-bancos.com/ca.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.pisos-de-bancos.com">
 
     <!-- Preload critical resources -->
     <link rel="preload" href="fonts/Alexandria-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
@@ -53,120 +53,69 @@
     </script>
 
     <style>
-        /* Critical CSS inlined for faster rendering */
-        @font-face {
-            font-family: 'Rubik';
-            src: url('fonts/Alexandria-VariableFont_wght.ttf') format('truetype');
-            font-weight: 100 900;
-            font-style: normal;
-            font-display: swap;
+        /* Root variables */
+        :root {
+            --primary-color: #1c2d4f;
+            --secondary-color: #384f68;
+            --text-color: #333c5e;
+            --background-color: #d2e8ff;
+            --white: #ffffff;
         }
+
+        /* Base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.25rem;
+            width: 100%;
+        }
+
         a {
             color: inherit;
             text-decoration: none;
         }
-        body {
-            font-family: 'Rubik', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #d2e8ff;
-            color: #333c5e;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+
+        /* Header styles */
         header {
-            background-color: #1c2d4f;
-            color: white;
+            background-color: var(--primary-color);
+            color: var(--white);
             text-align: center;
+            padding: 2rem 0;
         }
+
         .logo {
             width: 100px;
             height: 100px;
+            border-radius: 12px;
         }
+
         h1 {
-            font-size: 3em;
-            margin: 20px 0;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin: 1rem 0;
         }
-        .description {
-            font-size: 1.2em;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        #google-badge {
-            height: 100px;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: #6a6a6a;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            transition: background-color 0.3s;
-        }
-        .cta-button:hover {
-            background-color: #384f68;
-        }
-        .cta-button2:hover {
-            background-color: rgb(32, 27, 43);
-        }
-        .features, .other-apps {
-            justify-content: space-around;
-            margin-top: 50px;
-        }
-        .other-apps-container {
-            display: flex;
-            flex-wrap: wrap;
-            color: #444;
-        }
-        .features {
-            display: flex;
-        }
-        .feature, .app {
-            flex-basis: 30%;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .feature img, .app img {
-            width: 64px;
-            height: 64px;
-        }
-        .app {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            flex: 1 1 calc(50% - 20px);
-            margin: 10px;
-            box-sizing: border-box;
-        }
-        .app h3 {
-            margin-top: 10px;
-        }
-        .app .logo-other-app {
-            height: 140px;
-            width: 140px;
-        }
-        footer {
-            background-color: #384f68;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 50px;
-        }
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
+
+        /* Language selector */
         .language-selector {
             background-color: #1d4471;
             text-align: right;
+            padding: 0.5rem 0;
         }
+
         .language-selector select {
             background-color: #263545;
             color: white;
@@ -175,59 +124,81 @@
             font-size: 14px;
             border-radius: 5px;
         }
-        .language-selector option {
-            padding-left: 30px;
-            background-repeat: no-repeat;
-            background-position: 6px center;
-            background-size: 20px auto;
-        }
-        .flag-icon {
-            margin-right: 5px;
-        }
-        .screenshots {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 50px;
-        }
-        .screenshot {
-            flex: 1 1 calc(50% - 20px);
-            margin: 10px;
-            box-sizing: border-box;
-            cursor: pointer;
-        }
-        .screenshot img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+        /* Main content styles */
+        .description {
+            text-align: center;
+            margin: 2rem 0;
         }
 
-        /* New styles for the carousel */
-        .carousel-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
+        /* Features section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Screenshots section */
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .screenshot {
+            cursor: pointer;
+        }
+
+        .screenshot img {
             width: 100%;
-            height: 100%;
+            height: auto;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Carousel styles */
+        .carousel-overlay {
+            position: fixed;
+            inset: 0;
             background-color: rgba(0, 0, 0, 0.9);
             z-index: 1000;
+            display: none;
         }
+
         .carousel-container {
-            position: absolute;
-            top: 0;
-            left: 0;
+            position: relative;
             width: 100%;
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
         .carousel-image {
-            max-width: 100%;
-            max-height: 100%;
+            max-width: 90%;
+            max-height: 90vh;
             object-fit: contain;
         }
+
         .carousel-nav {
             position: absolute;
             top: 50%;
@@ -235,17 +206,20 @@
             font-size: 2em;
             color: white;
             cursor: pointer;
-            user-select: none;
             background-color: rgba(0, 0, 0, 0.5);
             padding: 10px;
             border-radius: 5px;
+            user-select: none;
         }
+
         .carousel-nav.prev {
             left: 10px;
         }
+
         .carousel-nav.next {
             right: 10px;
         }
+
         .carousel-close {
             position: absolute;
             top: 10px;
@@ -256,6 +230,154 @@
             background-color: rgba(0, 0, 0, 0.5);
             padding: 5px 10px;
             border-radius: 5px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            margin: 4rem auto;
+            max-width: 800px;
+        }
+
+        .faq h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+
+        details {
+            background: var(--white);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            padding: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        details[open] {
+            margin: 1rem 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        summary {
+            padding: 1.25rem;
+            cursor: pointer;
+            position: relative;
+            font-weight: 600;
+            list-style: none;
+            color: var(--primary-color);
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            transition: transform 0.3s ease;
+        }
+
+        details[open] summary::after {
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        details p {
+            margin: 0;
+            padding: 1.25rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        /* Other apps section */
+        .other-apps {
+            margin-top: 3rem;
+        }
+
+        .other-apps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .app {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .logo-other-app {
+            width: 140px;
+            height: 140px;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        /* Button styles */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #2c3e50;
+        }
+
+        /* Accessibility */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .screenshots {
+                grid-template-columns: 1fr;
+            }
+
+            .other-apps-container {
+                grid-template-columns: 1fr;
+            }
+
+            .faq {
+                margin: 2rem auto;
+                padding: 0 1rem;
+            }
         }
     </style>
 </head>
@@ -286,7 +408,7 @@
             <p>Nosotros rastreamos los anuncios por ti, ¡solo espera las notificaciones!</p>
 
             <a href="https://play.google.com/store/apps/details?id=rstu.pisos_de_bancos" target="_blank" rel="noopener">
-                <img id="google-badge" alt="Consíguelo en Google Play" src="https://play.google.com/intl/es/badges/static/images/badges/es_badge_web_generic.png" width="250" height="100" />
+                <img id="google-badge" alt="Consíguelo en Google Play" src="https://play.google.com/intl/es/badges/static/images/badges/es_badge_web_generic.png" width="250" height="100">
             </a>
         </section>
 
@@ -339,6 +461,32 @@
                 <div class="carousel-close" onclick="closeCarousel()">&#10005;</div>
             </div>
         </div>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <h2>Preguntas Frecuentes</h2>
+            
+            <details>
+                <summary role="button" aria-expanded="false">
+                    ¿Qué es Pisos de Bancos?
+                </summary>
+                <p>Pisos de Bancos es una aplicación móvil que envía alertas sobre propiedades bancarias en venta. Nuestra plataforma te mantiene informado sobre las últimas oportunidades inmobiliarias de los bancos en tiempo real.</p>
+            </details>
+
+            <details>
+                <summary role="button" aria-expanded="false">
+                    ¿Cómo recibo alertas de propiedades bancarias?
+                </summary>
+                <p>Descarga nuestra aplicación y configura tus preferencias para recibir alertas personalizadas. Podrás establecer filtros por ubicación, precio, tipo de propiedad y más para recibir solo las notificaciones que te interesan.</p>
+            </details>
+
+            <details>
+                <summary role="button" aria-expanded="false">
+                    ¿Es gratuita la aplicación?
+                </summary>
+                <p>Sí, nuestra aplicación es completamente gratuita y sin suscripciones ocultas. Puedes descargarla y usar todas sus funciones sin ningún coste.</p>
+            </details>
+        </section>
 
 
         <section class="description">
